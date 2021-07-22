@@ -1,10 +1,10 @@
 import express, { json } from 'express'
 import mongoose from 'mongoose'
 import { mongoURI } from './config/keys.js'
-import { } from './routes/api/items.js'
+import router from './routes/api/items.js'
 
 const app = express();
-const items = 
+// const items = require('./routes/api/items')
 
 app.use(json());
 
@@ -17,6 +17,11 @@ mongoose
     .then(() => console.log('Connection to mongo db successful!'))
     .catch(err => console.log(err));
 
+// Using routes
+app.use('/api/items', router);
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
+
+// DragoonZoomRival@42069
