@@ -1,1 +1,1 @@
-# mern-shopping-list
+# To-do list using the MERN stack
