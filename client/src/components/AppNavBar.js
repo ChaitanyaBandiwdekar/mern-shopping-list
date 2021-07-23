@@ -25,7 +25,7 @@ class AppNavbar extends Component{
     render() {
         return(
             <div>
-            <Navbar color="dark" dark expand="sm" className="mb-3">
+            <Navbar color="dark" dark className="mb-5">
                 <Container>
                     <NavbarBrand href="/">
                         To-do list
@@ -38,6 +38,12 @@ class AppNavbar extends Component{
                             <NavItem>
                                 <NavLink href="https://github.com/ChaitanyaBandiwdekar">
                                     Github
+                                </NavLink>
+                            </NavItem>
+
+                            <NavItem>
+                                <NavLink href="https://in.linkedin.com/in/chaitanya-bandiwdekar-11329a18a">
+                                    LinkedIn
                                 </NavLink>
                             </NavItem>
                         </Nav>
