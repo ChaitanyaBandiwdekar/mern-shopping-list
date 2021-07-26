@@ -22,15 +22,15 @@ class ToDoList extends Component {
             <Container>
                 <ListGroup>
                     <TransitionGroup className="todo-list">
-                        {items.map(({ id, name }) => (
-                            <CSSTransition key={id} timeout={250} classNames="fade">
-                                <ListGroupItem>
+                        {items.map(({ _id, name }) => (
+                            <CSSTransition key={_id} timeout={250} classNames="fade">
+                                <ListGroupItem style={{borderLeftColor: "green", borderLeftWidth: "0.25rem", marginBottom:"0.5rem"}}>
                                     <Button
                                         outline
                                         className="remove-btn"
                                         color="danger"
                                         size="sm"
-                                        onClick={this.onDeleteClick.bind(this, id)}
+                                        onClick={this.onDeleteClick.bind(this, _id)}
                                         >
                                         &times;
                                     </Button>
