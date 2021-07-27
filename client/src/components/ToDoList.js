@@ -24,17 +24,20 @@ class ToDoList extends Component {
                     <TransitionGroup className="todo-list">
                         {items.map(({ _id, name }) => (
                             <CSSTransition key={_id} timeout={250} classNames="fade">
-                                <ListGroupItem style={{borderLeftColor: "green", borderLeftWidth: "0.25rem", marginBottom:"0.5rem"}}>
+                                <ListGroupItem className='task' style={{borderRadius: "0.5rem", marginBottom: "0.5rem"}}>
                                     <Button
                                         outline
                                         className="remove-btn"
-                                        color="danger"
+                                        color="success"
                                         size="sm"
                                         onClick={this.onDeleteClick.bind(this, _id)}
                                         >
-                                        &times;
+                                        ✓
                                     </Button>
-                                    {name}
+                                    <h6>{name}</h6>
+                                    {/* <p>12:00</p>      
+                                    {true?<p className="important">Important</p>:<p></p>}                               */}
+                                    
                                 </ListGroupItem>
                             </CSSTransition>
                         ))}

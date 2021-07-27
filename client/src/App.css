@@ -19,3 +19,29 @@
   opacity: 0.01;
   transition: opacity 275ms ease-out;
 }
+
+h6 {
+  display: inline;
+}
+
+ListGroupItem {
+  display: flex;
+  flex: auto;
+  background-color: #fafafa;
+}
+
+.important {
+  color: red;
+}
+
+.task:hover {
+  border-left-color: green;
+  border-width: 2px;
+  border-left-width: 5px;
+}
+
+.task-important:hover {
+  border-left-color: red;
+  border-width: 2px;
+  border-left-width: 5px;
+}
